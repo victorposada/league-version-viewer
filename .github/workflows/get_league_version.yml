@@ -32,7 +32,7 @@ jobs:
 
     - name: Create new index file
       if: env.changed == 'true'
-      run: template.py
+      run: python3 template.py
         
     - name: Git add.
       if: env.changed == 'true'
