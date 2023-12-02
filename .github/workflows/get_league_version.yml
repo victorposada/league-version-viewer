@@ -15,10 +15,10 @@ jobs:
     - name: Get Latest Version
       id: get_version
       run: |
-        LATEST_VERSION=$(curl -s https://ddragon.leagueoflegends.com/api/versions.json | jq -r '.[0]')
-        echo "League of Legends latest version: $LATEST_VERSION"
-        echo "::set-output name=latest_version::$LATEST_VERSION"
-        echo $LATEST_VERSION > latest_version
+        current_version=$(curl -s https://ddragon.leagueoflegends.com/api/versions.json | jq -r '.[0]')
+        echo "League of Legends latest version: $current_version"
+        echo "::set-output name=current_version::$current_version"
+        echo $current_version > current_version
         
     - name: Check if version has changed
       id: check_version
