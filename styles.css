@@ -31,6 +31,19 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+    .version h1 {
+        font-size: 7.5em;
+    }
+}
+
+@media (max-width: 458px) {
+    .version h1 {
+        font-size: 5em;
+    }
+}
+
+
 footer {
     background-color: #f1f1f1;
     text-align: center;
