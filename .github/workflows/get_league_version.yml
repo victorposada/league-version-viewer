@@ -24,29 +24,29 @@ jobs:
       id: check_version
       run: |
         if git diff --exit-code current_version; then
-          echo "changed=true" >> $GITHUB_ENV
-        else
           echo "changed=false" >> $GITHUB_ENV
+        else
+          echo "changed=true" >> $GITHUB_ENV
         fi
       shell: bash
 
     - name: Create new index file
-      if: steps.check_version.outputs.changed == 'true'
+      if: env.changed == 'true'
       run: template.py
         
     - name: Git add.
-      if: steps.check_version.outputs.changed == 'true'
+      if: env.changed == 'true'
       run: git add .
       
     - name: Commit files
-      if: steps.check_version.outputs.changed == 'true'
+      if: env.changed == 'true'
       run: |
         git config --local user.email "victorposadasoto@github-actions.com"
         git config --local user.name "github-actions[bot]"
         git commit -a -m "Add changes"
 
     - name: Push changes
-      if: steps.check_version.outputs.changed == 'true'
+      if: env.changed == 'true'
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GH_TOKEN }}
