@@ -22,7 +22,13 @@ jobs:
         
     - name: Check if version has changed
       id: check_version
-      run: echo "::set-output name=changed::$(git diff --exit-code current_version || echo true)"
+      run: |
+        if git diff --exit-code current_version; then
+          echo "changed=false" >> $GITHUB_ENV
+        else
+          echo "changed=true" >> $GITHUB_ENV
+        fi
+      shell: bash
 
     - name: Create new index file
       if: steps.check_version.outputs.changed == 'true'
