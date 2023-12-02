@@ -4,7 +4,7 @@ Welcome to the League of Legends Version Viewer repository! This project is desi
 
 ## Live Demo
 
-Visit the live demo: [League of Legends Version Viewer](https://yourusername.github.io/league-version-viewer)
+Visit the live demo: [League of Legends Version Viewer](https://victorposada.github.io/league-version-viewer)
 
 ## How It Works
 
