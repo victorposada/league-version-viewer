@@ -1,4 +1,4 @@
-name: League Test
+name: Get League version
 
 on:
   workflow_dispatch:
