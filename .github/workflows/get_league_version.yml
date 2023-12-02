@@ -23,6 +23,10 @@ jobs:
     - name: Check if version has changed
       id: check_version
       run: echo "::set-output name=changed::$(git diff --exit-code current_version || echo true)"
+
+    - name: Create new index file
+      if: steps.check_version.outputs.changed == 'true'
+      run: template.py
         
     - name: Git add.
       if: steps.check_version.outputs.changed == 'true'
