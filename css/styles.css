@@ -1,0 +1,140 @@
+/*
+Changes:
+    Background: Updated to use background2.jpg.
+    Font: Added a font family named league-light.
+    Header (.version h1):
+        Adjusted font size to 7em.
+        Modified text color to #C89B3C.
+    Header (.version h4):
+        Added a new style for h4 elements:
+            Font size: 2em.
+            Font family: league-light.
+            Color: #a09c97.
+    Footer:
+        Background color updated to #000000.
+        Added a 2px solid top border with color #785A28.
+        Styled links within the footer (footer a):
+            Text decoration: none.
+            Color: #F0E6D2.
+    Paragraphs (p):
+        Font color updated to #F0E6D2.
+    Font Faces:
+        Added the league-light font.
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('/img/background2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+.magic-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+    mix-blend-mode: screen;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.version-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.version {
+    text-align: center;
+}
+
+.version-link:hover .version h1 {
+    font-family: 'league', sans-serif;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.version h1 {
+    font-family: 'league', sans-serif; 
+    font-size: 7em;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+    color: #C89B3C;
+}
+.version h4{
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 2em;
+    font-family: 'league-light' ;
+    color: #a09c97;
+}
+
+@media (max-width: 768px) {
+    .version h1 {
+        font-size: 7.5em;
+    }
+}
+
+@media (max-width: 458px) {
+    .version h1 {
+        font-size: 5em;
+    }
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #785A28; 
+    box-sizing: border-box; 
+}
+footer a{
+    text-decoration: none;
+    color: #F0E6D2;
+}
+
+p {
+    font-family: 'league', sans-serif; 
+    color: #F0E6D2;
+}
+
+@font-face {
+    font-family: 'league';
+    src: url('/fonts/BeaufortforLOL-BoldItalic.ttf');
+    
+}
+@font-face {
+    font-family: 'league-light';
+    src: url(/fonts/BeaufortforLOL-Light.ttf);
+}
+
+
+
+/*
+Possible Future Styles:
+
+    Classic Magic Effect:
+        Placeholder for styles related to a classic magic effect.
+        Example selector: .magic-text.classic-magic.
+    League of Legends Fog:
+        Placeholder for styles related to a League of Legends fog effect.
+        Example selector: body.league-fog::after.
+    Better Animations:
+        Placeholder for styles to enhance animations.
+        Example selector: .version h1.better-animation.
+    Better Background:
+        Placeholder for styles to improve the background image or effect.
+        Example selector: body.better-background.
+*/
