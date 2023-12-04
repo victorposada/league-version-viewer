@@ -27,7 +27,6 @@ body {
     padding: 0;
     height: 100vh;
     background-image: url('/media/background-gif.gif'), url('/media/background-video.mp4');
-    background-size: cover;
     background-position: center;
     background-blend-mode:soft-light; 
 }
