@@ -26,10 +26,13 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('/img/background2.jpg'); 
-    background-size: cover; 
-    background-position: center; 
+    background-image: url('/media/background-gif.gif'), url('/media/background-video.mp4');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:soft-light; 
 }
+
+
 .magic-text {
     position: absolute;
     top: 50%;
